@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgba(255, 250, 250, 1);
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem 2rem;
+    justify-content: space-between;
+    color: #fff;
+    background-color: #000;
+}
+
+header .header-title {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+header .header-title img {
+    width: 3rem;
+    height: 3rem;
+}
+
+header #search-note {
+    padding: 0.2rem 0.8rem;
+    display: flex;
+    gap: 0.5rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+}
+
+header #search-note input {
+    outline: none;
+    border: none;
+    width: 15rem;
+    padding-block: 0.5rem;
+}
+
+header #search-note .search-icon {
+    cursor: pointer;
+    background: none;
+}
+
+main {
+    max-width: 1150px;
+    margin: auto;
+}
+
+main #search-note {
+    display: none;
+}
+
+.add-note-wrapper {
+    width: 480px;
+    margin: 1rem auto;
+    background-color: #000;
+    padding: 1.2rem 2rem;
+}
+
+.add-note-wrapper h2 {
+    color: #eee;
+}
+
+.add-note-form {
+    color: rgba(255, 255, 255, 0.741);
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding-block-start: 1.2rem;
+}
+
+.add-note-form .input-title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.add-note-form .input-title-wrapper input {
+    width: 65%;
+}
+
+.add-note-form .input-title-wrapper .limit-char {
+    color: #9b9b9b;
+}
+
+.add-note-form .input-title-wrapper input,
+.add-note-form #input-note-body {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 0.5rem;
+    background-color: rgba(255, 238, 240, 1);
+}
+
+.button-add-note {
+    padding: 0.5rem;
+    border-radius: 5px;
+    background: none;
+    color: #fff;
+    border: 2px solid rgba(255, 184, 191, 1);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button-add-note:hover {
+    background-color: rgba(255, 184, 191, 1);
+    color: #000;
+}
+
+.list-note-wrapper {
+    background-color: #000;
+    padding: 1.2rem 2rem;
+    margin-block-end: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.list-note-wrapper h2 {
+    color: #fff;
+}
+
+.list-note-wrapper .empty-list-message {
+    padding-block-start: 1rem;
+    color: #9b9b9b;
+    text-align: center;
+}
+
+.list-note {
+    padding-block-start: 1.2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.2rem;
+}
+
+.note-card {
+    background-color: rgba(255, 238, 240, 1);
+    border-radius: 8px;
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.note-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1;
+    gap: 0.3rem;
+}
+
+.note-content h3 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.note-content-created-date {
+    color: rgba(118, 118, 118, 0.936);
+    font-size: 0.9rem;
+}
+
+.action-button {
+    margin-block-start: 0.8rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.action-button-archived,
+.action-button-delete {
+    width: 6rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.action-button-archived {
+    border: none;
+    background-color: rgba(124, 209, 132, 1);
+    color: #fff;
+}
+
+.action-button-delete {
+    border: 2px solid rgba(255, 0, 25, 1);
+    color: rgba(255, 0, 25, 1);
+}
+
+/* Tablet */
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 90%;
+    }
+}
+
+/* Phones */
+@media only screen and (max-width: 500px) {
+    html {
+        font-size: 80%;
+    }
+
+    header {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    header #search-note {
+        display: none;
+    }
+
+    main #search-note {
+        border: 2px solid #000;
+        display: flex;
+        padding: 0.3rem 0 0.3rem 0.8rem;
+        margin: 1.2rem 0 0 2rem;
+        border-radius: 15px;
+        width: 50%;
+    }
+
+    main #search-note input {
+        border: none;
+        background: none;
+        outline: none;
+        width: 14.5rem;
+        padding-block: 0.3rem;
+    }
+
+    main #search-note .search-icon {
+        background: none;
+    }
+
+    .add-note-wrapper {
+        width: 80%;
+        background-color: #000;
+        padding: 1.2rem 2rem;
+    }
+
+    .add-note-form {
+        gap: 0.6rem;
+        padding-block-start: 1.2rem;
+    }
+}
